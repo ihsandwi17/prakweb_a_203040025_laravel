@@ -11,8 +11,10 @@
             <h2>
                 <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
             </h2>
-            <h5>By: {{ $post["author"] }}</h5>
-            <p>{{ $post->excerpt}}</p>
+
+       <p>By. Nur Ihsan Dwi <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+ 
+            <p>{{ $post["body"] }}</p>
         </article>
     @endforeach
 
