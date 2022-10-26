@@ -7,14 +7,16 @@
 {{-- <h1>Halaman Posts</h1> --}}
 
     @foreach ($posts as $post)
-        <article class="mb-5">
+        <article class="mb-5 border-bottom pd-4">
             <h2>
-                <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                <a href="/posts/{{ $post->slug }}" class="text-decoration-none">{{ $post->title }}</a>
             </h2>
 
-       <p>By. Nur Ihsan Dwi <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
- 
+       <p>By. <a href="#" class="text-decoration-none">{{ $post->user->name }}</a> in <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
+       
             <p>{{ $post["body"] }}</p>
+
+            <a href="/posts/{{  $post->slug }}">Read more..</a>
         </article>
     @endforeach
 
