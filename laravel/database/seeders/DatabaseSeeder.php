@@ -17,19 +17,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+      User::factory(3)->create();
 
-        User::create([
-            'name' => 'Nur Ihsan Dwi Listiono',
-            'email' => 'Nurihsan273@gmail.com',
-            'password' => bcrypt('12345')
-        ]);
+        // User::create([
+        //     'name' => 'Nur Ihsan Dwi Listiono',
+        //     'email' => 'Nurihsan273@gmail.com',
+        //     'password' => bcrypt('12345')
+        // ]);
 
-        User::create([
-            'name' => 'Sigit',
-            'email' => 'Sigit23@gmail.com',
-            'password' => bcrypt('12345')
-        ]);
+        // User::create([
+        //     'name' => 'Sigit',
+        //     'email' => 'Sigit23@gmail.com',
+        //     'password' => bcrypt('12345')
+        // ]);
+
 
         Category::create([
             'name' => 'Web-Programming',
@@ -41,6 +42,9 @@ class DatabaseSeeder extends Seeder
             'slug' => 'personal'
         ]);
 
+        Post::factory(20)->create();
+
+//pertama
         Post::create([
             'title' => 'Judul Pertama',
             'slug' => 'judul-pertama',
@@ -50,6 +54,7 @@ class DatabaseSeeder extends Seeder
             'user_id' => 1
         ]);
 
+//kedua
         Post::create([
             'title' => 'Judul Ke Dua',
             'slug' => 'judul-ke-dua',
@@ -59,6 +64,7 @@ class DatabaseSeeder extends Seeder
             'user_id' => 1
         ]);
 
+//ketiga
         Post::create([
             'title' => 'Judul Ke Tiga',
             'slug' => 'judul-ke-tiga',
@@ -68,6 +74,7 @@ class DatabaseSeeder extends Seeder
             'user_id' => 1
         ]);
 
+//keempat
         Post::create([
             'title' => 'Judul Ke Empat',
             'slug' => 'judul-ke-empat',
